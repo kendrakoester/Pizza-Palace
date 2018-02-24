@@ -9,9 +9,22 @@
 /*General CSS*/
 body {
     font-family: Arial, sans-serif;
-    background-image: url(../images/newHomePizza2.jpg);
-    background-size: cover;
+    /*background-image: url(../images/newHomePizza2.jpg);
+    background-size: cover;*/
     color: white;
+}
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/newHomePizza2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 0.9;
+    filter:alpha(opacity=90);
 }
 
 /* Header */
@@ -24,7 +37,31 @@ body {
 
 
 /* Main Body */
+.list-group-item{
+    color: #000;
 
+}
+
+#pageBtn {
+    border: none;
+    color: #fff;
+    background-color: #d9b36c;
+    text-transform: uppercase;
+}
+
+#addToCartBtn {
+    border: none;
+    color: #fff;
+    background-color: #565902;
+    justify-content: right;
+    margin: 10px;
+    text-transform: uppercase;
+}
+
+#menuImage {
+    width: 100%;
+    height: 100%;
+}
 
 /* Footer */
 #footer-p {

@@ -17,6 +17,8 @@
 </head>
 
 <body>
+    <div id="background"></div>
+    <div class="clear-fix"></div>
 
     <!--header -->
     <header>
@@ -25,27 +27,29 @@
 
             <!-- single row -->
             <div class="row">
-
+                <br/>
                 <!-- col left -->
                 <div class="col-md-6">
+                    <a href="index.html">
                         <img class="img-responsive img-rounded" src="images/logo.png" alt="Pizza Palace">
+                    </a>
                 </div>
 
                 <!-- col right -->
-               <!-- <div class="col-md-6">-->
+                <!-- <div class="col-md-6">-->
 
-                    <!--home page menu-->
-                    <div class="col-md-2">
-                        <a href="menu.html" id="menuBtn" class="btn btn-primary btn-lg"> Menu</a>
-                    </div>
+                <!--home page menu-->
+                <div class="col-md-2">
+                    <a href="menu.html" id="menuBtn" class="btn btn-primary btn-lg"> Menu</a>
+                </div>
 
-                    <div class="col-md-2">
-                        <a href="locations.html" id="menuBtn" class="btn btn-primary btn-lg"> Locations</a>
-                    </div>
+                <div class="col-md-2">
+                    <a href="locations.html" id="menuBtn" class="btn btn-primary btn-lg"> Locations</a>
+                </div>
 
-                    <div class="col-md-2">
-                        <a href="aboutUs.html" id="menuBtn" class="btn btn-primary btn-lg"> About Us</a>
-                    </div>
+                <div class="col-md-2">
+                    <a href="aboutUs.html" id="menuBtn" class="btn btn-primary btn-lg"> About Us</a>
+                </div>
 
                 <!--</div>-->
 
@@ -61,16 +65,258 @@
 
         <!-- main container -->
         <div class="container">
-
-            <!-- single row -->
+            <br/>
+            <!--PIES-->
             <div class="row">
 
-                <!-- col-1 -->
-                <div class="col-md-8">
+                <div class="col-md-12">
 
-                    <h2>Menu Page</h2>
-                    <p>Future text will go here. Maybe weekly specials headlined with images...</p>
-                    <hr>
+                    <h2>PIES</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <b>Three Cheese</b>
+                                    <p>Classic Mozzerella cheese stuffed crust, tomato basil marinara sauce, covered in layers
+                                        of cheese. Cheeses include Parmesan, Asiago, and Mozzarella.
+                                    </p>
+                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med">Add to Cart</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <img id="menuImage" class="img-responsive img-rounded" src="images/menuCheese.jpg" alt="Three Cheese">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <b>Pepperoni</b>
+                                    <p>Classic crust, tomato basil marinara sauce, covered in Mozzerella cheese and layers of
+                                        Pepperoni.
+                                    </p>
+                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med">Add to Cart</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <img id="menuImage" class="img-responsive img-rounded" src="images/menuPepperoni.jpeg" alt="Pepperoni">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <b>Hawaiian</b>
+                                    <p>Classic crust, tomato basil marinara sauce, covered in Mozzerella cheese, topped with
+                                        fresh pineapple and ham.
+                                    </p>
+                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med">Add to Cart</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <img id="menuImage" class="img-responsive img-rounded" src="images/menuHawiian.jpeg" alt="Hawiian">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <b>Combo</b>
+                                    <p>Classic crust, tomato basil marinara sauce, covered in Mozzerella cheese, topped with
+                                        sliced green peppers, button mushrooms, sliced roma tomatos, olives, Italian sausage,
+                                        pepperoni and ham.
+                                    </p>
+                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med">Add to Cart</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <img id="menuImage" class="img-responsive img-rounded" src="images/menuCombo.png" alt="Combo">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <b>Meat Lovers</b>
+                                    <p>Classic crust, tomato basil marinara sauce, covered in Mozzerella cheese, topped with
+                                        Italian sausage, pepperoni, bacon crumbles and ham.
+                                    </p>
+                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med">Add to Cart</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <img id="menuImage" class="img-responsive img-rounded" src="images/menuMeatLovers.jpeg" alt="Meat Lovers">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <b>Veggie Lovers</b>
+                                    <p>Classic crust, tomato basil marinara sauce, covered in Mozzerella cheese, topped with
+                                        sliced green peppers, button mushrooms, sliced roma tomatos, olives, artichoke hearts,
+                                        basil leaves, and baby spinach.
+                                    </p>
+                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med">Add to Cart</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <img id="menuImage" class="img-responsive img-rounded" src="images/menuVeggieLover.jpeg" alt="Veggie Lovers">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+            <br/>
+            <!--SIDES-->
+            <div class="row">
+
+                <div class="col-md-12">
+
+                    <h2>SIDES</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <b>Bread Sticks</b>
+                                    <p>Soft garlic butter bread sticks.
+                                    </p>
+                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med">Add to Cart</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <img id="menuImage" class="img-responsive img-rounded" src="images/menuBreadSticks.png" alt="Bread Sticks">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <b>Garden Salad</b>
+                                    <p>Mixed greens, tomatos, cucumber, carrots and ranch dressing.
+                                    </p>
+                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med">Add to Cart</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <img id="menuImage" class="img-responsive img-rounded" src="images/menuGardenSalad.jpg" alt="Garden Salad">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <b>Ceasar Salad</b>
+                                    <p>Chopped romain lettuce, cheese, croutons and ceasar dressing.
+                                    </p>
+                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med">Add to Cart</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <img id="menuImage" class="img-responsive img-rounded" src="images/menuCeasarSalad.jpg" alt="Ceasar Salad">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+            <br/>
+            <!--DESSERTS-->
+            <div class="row">
+
+                <div class="col-md-12">
+
+                    <h2>DESSERTS</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <b>Chocolate Chip Cookie Dough</b>
+                                    <p>Soft chocolate chip cookies. Bake at 350 degrees for 10-12 minutes or until golden brown.
+                                    </p>
+                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med">Add to Cart</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <img id="menuImage" class="img-responsive img-rounded" src="images/menuChocolateChipCookies.jpg" alt="Chocolate Chip Cookies">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <b>Peanut Butter Cookie Dough</b>
+                                    <p>Soft peanut butter cookies. Bake at 350 degrees for 10-12 minutes or until golden brown.
+                                    </p>
+                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med">Add to Cart</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <img id="menuImage" class="img-responsive img-rounded" src="images/menuPeanutButterCookies.jpg" alt="Peanut Butter Cookies">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <b>Cinnamon Swirl Bread</b>
+                                    <p>Classic crust covered in Cinnamon and sugar with white icing swirled on.
+                                    </p>
+                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med">Add to Cart</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <img id="menuImage" class="img-responsive img-rounded" src="images/menuCinnamonPizza.png" alt="Cinnamon Pizza">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+            <br/>
+            <!--DRINKS-->
+            <div class="row">
+
+                <div class="col-md-12">
+
+                    <h2>DRINKS</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <b>Soda</b>
+                                    <p>CocaCola, Diet Coke, Dr Pepper, Sprite, Orange Fanta, Grape Fanta.
+                                    </p>
+                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med">Add to Cart</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <img id="menuImage" class="img-responsive img-rounded" src="images/menuSoda.png" alt="Soda">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <b>Lemonade</b>
+                                    <p>All natural Lemonade.
+                                    </p>
+                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med">Add to Cart</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <img id="menuImage" class="img-responsive img-rounded" src="images/menuLemonade.jpg" alt="Lemonade">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <b>Tea</b>
+                                    <p>Fresh brewed Sweet Tea or Iced Tea.
+                                    </p>
+                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med">Add to Cart</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <img id="menuImage" class="img-responsive img-rounded" src="images/menuTea.jpg" alt="Tea">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
                 </div>
 
             </div>
@@ -88,15 +334,15 @@
 
             <!-- single row -->
             <div class="row">
-
+                <br/>
                 <!-- col-full -->
-                <divclass="col-md-12">
-
+                <div class="col-md-12">
+                    <a href="Refrences.txt" style="color:white;">Image Reference Links</a>
                     <p id="footer-p">Copyrights &copy; Pizza Palace</p>
 
-            </div>
+                </div>
 
-        </div>
+            </div>
 
         </div>
 

@@ -10,9 +10,79 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
     <!--JavaScript-->
+    <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script scr="js/jquery.js"></script>
+    
 
+    <script type="text/javascript">
+
+        function calculateCost() { //calculate base cost of pizza with all topping values
+
+            var crustType = document.getElementById("crust");
+            var crustValue = crustType.options[crustType.selectedIndex].value;
+            var sauceType = document.getElementById("sauce");
+            var sauceValue = sauceType.options[sauceType.selectedIndex].value;
+            var cheeseType = document.getElementById("cheese");
+            var cheeseValue = cheeseType.options[cheeseType.selectedIndex].value;
+
+            var totalCost = 7.00; //base cost of pizza
+            var crustCost, sauceCost, cheeseCost;
+
+            switch(crustValue) { //change the crust cost based on selection
+                case "original":
+                    crustCost = 1.00;
+                    break;
+                case "thin":
+                    crustCost = 1.50;
+                    break;
+                case "stuffed":
+                    crustCost = 2.00;
+                    break;
+            }
+
+            switch(sauceValue) { //change the sauce cost based on selection
+                case "original":
+                    sauceCost = 0.50;
+                    break;
+                case "alfredo":
+                    sauceCost = 1.00;
+                    break;
+            }
+
+            switch(cheeseValue) { //change the cheese cost based on selection
+                case "cheddar":
+                    cheeseCost = 1.00;
+                    break;
+                case "mozzarella":
+                    cheeseCost = 1.00;
+                    break;
+                case "parmesan":
+                    cheeseCost = 2.00;
+                    break;
+            }
+
+            var checkboxes = document.getElementsByName('topping');
+            var selected = [];
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    selected.push(checkboxes[i].value);
+                }
+            }
+
+            var toppingsCount = selected.length;
+            var toppingsCost = toppingsCount * 0.75;
+
+            var totalCost = totalCost + crustCost + sauceCost + cheeseCost + toppingsCost;
+
+            document.getElementById("crustDisplay").innerHTML = crustValue;
+            document.getElementById("sauceDisplay").innerHTML = sauceValue;
+            document.getElementById("cheeseDisplay").innerHTML = cheeseValue;
+            document.getElementById("toppingsDisplay").innerHTML = selected;            
+            document.getElementById("totalDisplay").innerHTML = totalCost;
+        }
+
+
+    </script>
 
 </head>
 
@@ -65,19 +135,133 @@
         <!-- main container -->
         <div class="container">
 
-            <!-- single row -->
             <div class="row">
-                <br/>
-                <!-- col-1 -->
                 <div class="col-md-8">
-
-                    <h2>Create Your Own Pie</h2>
-                    <p>Coming Soon</p>
-                    <hr>
+                    <!--Crust-->
+                    <h2>Crust</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <select id="crust" name="crust">
+                                        <option value="original">Original</option>
+                                        <option value="thin">Thin</option>
+                                        <option value="stuffed">Stuffed</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!--Sauce-->
+                    <h2>Sauce</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <select id="sauce" name="sauce">
+                                        <option value="original">Original</option>
+                                        <option value="alfredo">Alfredo</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!--Cheese-->
+                    <h2>Cheese</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <select id="cheese" name="cheese">
+                                        <option value="cheddar">Cheddar</option>
+                                        <option value="mozzarella">Mozzarella</option>
+                                        <option value="parmesan">Parmesan</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!--Toppings-->
+                    <h2>Toppings</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <form>
+                                        <input type="checkbox" name="topping" value="pepperoni"> Pepperoni
+                                        <br>
+                                        <input type="checkbox" name="topping" value="mushrooms"> Mushrooms
+                                        <br>
+                                        <input type="checkbox" name="topping" value="onions"> Onions
+                                        <br>
+                                        <input type="checkbox" name="topping" value="sausage"> Sausage
+                                        <br>
+                                        <input type="checkbox" name="topping" value="bacon"> Bacon
+                                        <br>
+                                        <input type="checkbox" name="topping" value="olives"> Olives
+                                        <br>
+                                        <input type="checkbox" name="topping" value="green peppers"> Green Peppers
+                                        <br>
+                                        <input type="checkbox" name="topping" value="pineapple"> Pineapple
+                                        <br>
+                                        <input type="checkbox" name="topping" value="spinich"> Spinich
+                                        <br>
+                                        <input type="checkbox" name="topping" value="canadian bacon"> Canadian Bacon
+                                        <br>
+                                        <input type="checkbox" name="topping" value="tomatoes"> Tomatoes
+                                        <br>
+                                        <input type="checkbox" name="topping" value="chicken"> Chicken
+                                        <br>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!--Calculate Cost-->
+                    <div class="row">
+                        <div class="col-md-8">
+                            <button onclick="calculateCost()" id="calculateCost" class="btn btn-primary btn-lg"> Calculate Cost</button>
+                        </div>
+                    </div>
                 </div>
-
+                <div class="col-md-4">
+                    <!--Total-->
+                    <h2>Total</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <p id="costDisplay">
+                                    <h5>Crust</h5>
+                                    <ul>
+                                        <li id="crustDisplay"></li>
+                                    </ul>
+                                    <h5>Sauce</h5>
+                                    <ul>
+                                        <li id="sauceDisplay"></li>
+                                    </ul>
+                                    <h5>Cheese</h5>
+                                    <ul>
+                                        <li id="cheeseDisplay"></li>
+                                    </ul>
+                                    <h5>Toppings</h5>
+                                    <ul>
+                                        <li id="toppingsDisplay"></li>
+                                        <li id="toppingsDisplay"></li>
+                                    </ul>
+                                    <h5>Total</h5>
+                                    <ul>
+                                        <li id="totalDisplay"></li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <!--Add to Cart-->
+                    <div class="row">
+                        <a href="#" id="addToCartBtn" class="btn btn-primary btn-lg">Add to Cart</a>
+                    </div>
+                </div>
             </div>
-
         </div>
 
     </section>

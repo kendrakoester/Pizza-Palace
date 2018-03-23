@@ -42,10 +42,10 @@ body {
 
 }
 
-#pageBtn {
+#calculateCost {
     border: none;
     color: #fff;
-    background-color: #d9b36c;
+    background-color: #565902;
     text-transform: uppercase;
 }
 

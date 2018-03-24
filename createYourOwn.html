@@ -29,34 +29,34 @@
             var crustCost, sauceCost, cheeseCost;
 
             switch(crustValue) { //change the crust cost based on selection
-                case "original":
+                case "Original":
                     crustCost = 1.00;
                     break;
-                case "thin":
+                case "Thin":
                     crustCost = 1.50;
                     break;
-                case "stuffed":
+                case "Stuffed":
                     crustCost = 2.00;
                     break;
             }
 
             switch(sauceValue) { //change the sauce cost based on selection
-                case "original":
+                case "Original":
                     sauceCost = 0.50;
                     break;
-                case "alfredo":
+                case "Alfredo":
                     sauceCost = 1.00;
                     break;
             }
 
             switch(cheeseValue) { //change the cheese cost based on selection
-                case "cheddar":
+                case "Cheddar":
                     cheeseCost = 1.00;
                     break;
-                case "mozzarella":
+                case "Mozzarella":
                     cheeseCost = 1.00;
                     break;
-                case "parmesan":
+                case "Parmesan":
                     cheeseCost = 2.00;
                     break;
             }
@@ -78,7 +78,7 @@
             document.getElementById("sauceDisplay").innerHTML = sauceValue;
             document.getElementById("cheeseDisplay").innerHTML = cheeseValue;
             document.getElementById("toppingsDisplay").innerHTML = selected;            
-            document.getElementById("totalDisplay").innerHTML = totalCost;
+            document.getElementById("totalDisplay").innerHTML = "$" + totalCost;
         }
 
 
@@ -113,7 +113,7 @@
                 </div>
 
                 <div class="col-md-2">
-                    <a href="locations.html" id="menuBtn" class="btn btn-primary btn-lg"> Locations</a>
+                    <a href="https://www.google.com/maps" id="menuBtn" class="btn btn-primary btn-lg"> Locations</a>
                 </div>
 
                 <div class="col-md-2">
@@ -144,9 +144,9 @@
                             <div class="row">
                                 <div class="col-md-8">
                                     <select id="crust" name="crust">
-                                        <option value="original">Original</option>
-                                        <option value="thin">Thin</option>
-                                        <option value="stuffed">Stuffed</option>
+                                        <option value="Original">Original</option>
+                                        <option value="Thin">Thin</option>
+                                        <option value="Stuffed">Stuffed</option>
                                     </select>
                                 </div>
                             </div>
@@ -159,8 +159,8 @@
                             <div class="row">
                                 <div class="col-md-8">
                                     <select id="sauce" name="sauce">
-                                        <option value="original">Original</option>
-                                        <option value="alfredo">Alfredo</option>
+                                        <option value="Original">Original</option>
+                                        <option value="Alfredo">Alfredo</option>
                                     </select>
                                 </div>
                             </div>
@@ -173,9 +173,9 @@
                             <div class="row">
                                 <div class="col-md-8">
                                     <select id="cheese" name="cheese">
-                                        <option value="cheddar">Cheddar</option>
-                                        <option value="mozzarella">Mozzarella</option>
-                                        <option value="parmesan">Parmesan</option>
+                                        <option value="Cheddar">Cheddar</option>
+                                        <option value="Mozzarella">Mozzarella</option>
+                                        <option value="Parmesan">Parmesan</option>
                                     </select>
                                 </div>
                             </div>
@@ -188,29 +188,29 @@
                             <div class="row">
                                 <div class="col-md-8">
                                     <form>
-                                        <input type="checkbox" name="topping" value="pepperoni"> Pepperoni
+                                        <input type="checkbox" name="topping" value="Pepperoni"> Pepperoni
                                         <br>
-                                        <input type="checkbox" name="topping" value="mushrooms"> Mushrooms
+                                        <input type="checkbox" name="topping" value="Mushrooms"> Mushrooms
                                         <br>
-                                        <input type="checkbox" name="topping" value="onions"> Onions
+                                        <input type="checkbox" name="topping" value="Onions"> Onions
                                         <br>
-                                        <input type="checkbox" name="topping" value="sausage"> Sausage
+                                        <input type="checkbox" name="topping" value="Sausage"> Sausage
                                         <br>
-                                        <input type="checkbox" name="topping" value="bacon"> Bacon
+                                        <input type="checkbox" name="topping" value="Bacon"> Bacon
                                         <br>
-                                        <input type="checkbox" name="topping" value="olives"> Olives
+                                        <input type="checkbox" name="topping" value="Olives"> Olives
                                         <br>
-                                        <input type="checkbox" name="topping" value="green peppers"> Green Peppers
+                                        <input type="checkbox" name="topping" value="Green Peppers"> Green Peppers
                                         <br>
-                                        <input type="checkbox" name="topping" value="pineapple"> Pineapple
+                                        <input type="checkbox" name="topping" value="Pineapple"> Pineapple
                                         <br>
-                                        <input type="checkbox" name="topping" value="spinich"> Spinich
+                                        <input type="checkbox" name="topping" value="Spinich"> Spinich
                                         <br>
-                                        <input type="checkbox" name="topping" value="canadian bacon"> Canadian Bacon
+                                        <input type="checkbox" name="topping" value="Canadian Bacon"> Canadian Bacon
                                         <br>
-                                        <input type="checkbox" name="topping" value="tomatoes"> Tomatoes
+                                        <input type="checkbox" name="topping" value="Tomatoes"> Tomatoes
                                         <br>
-                                        <input type="checkbox" name="topping" value="chicken"> Chicken
+                                        <input type="checkbox" name="topping" value="Chicken"> Chicken
                                         <br>
                                     </form>
                                 </div>
@@ -231,25 +231,24 @@
                         <li class="list-group-item">
                             <div class="row">
                                 <p id="costDisplay">
-                                    <h5>Crust</h5>
-                                    <ul>
+                                    <h5>Crust:</h5>
+                                    <ul style="list-style-type:none">
                                         <li id="crustDisplay"></li>
                                     </ul>
-                                    <h5>Sauce</h5>
-                                    <ul>
+                                    <h5>Sauce:</h5>
+                                    <ul style="list-style-type:none">
                                         <li id="sauceDisplay"></li>
                                     </ul>
-                                    <h5>Cheese</h5>
-                                    <ul>
+                                    <h5>Cheese:</h5>
+                                    <ul style="list-style-type:none">
                                         <li id="cheeseDisplay"></li>
                                     </ul>
-                                    <h5>Toppings</h5>
-                                    <ul>
-                                        <li id="toppingsDisplay"></li>
+                                    <h5>Toppings:</h5>
+                                    <ul style="list-style-type:none">
                                         <li id="toppingsDisplay"></li>
                                     </ul>
-                                    <h5>Total</h5>
-                                    <ul>
+                                    <h5>Total:</h5>
+                                    <ul style="list-style-type:none">
                                         <li id="totalDisplay"></li>
                                     </ul>
                                 </p>

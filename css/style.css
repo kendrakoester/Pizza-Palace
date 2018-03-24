@@ -58,6 +58,15 @@ body {
     text-transform: uppercase;
 }
 
+#pageBtn {
+    border: none;
+    color: #fff;
+    background-color: #565902;
+    justify-content: right;
+    margin: 10px;
+    text-transform: uppercase;
+}
+
 #menuImage {
     width: 100%;
     height: 100%;

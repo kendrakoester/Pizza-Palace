@@ -12,10 +12,11 @@
     <!--JavaScript-->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/shoppingCart.js"></script>
     
-
     <script type="text/javascript">
-
+     
         function calculateCost() { //calculate base cost of pizza with all topping values
 
             var crustType = document.getElementById("crust");
@@ -28,7 +29,7 @@
             var totalCost = 7.00; //base cost of pizza
             var crustCost, sauceCost, cheeseCost;
 
-            switch(crustValue) { //change the crust cost based on selection
+            switch (crustValue) { //change the crust cost based on selection
                 case "Original":
                     crustCost = 1.00;
                     break;
@@ -40,7 +41,7 @@
                     break;
             }
 
-            switch(sauceValue) { //change the sauce cost based on selection
+            switch (sauceValue) { //change the sauce cost based on selection
                 case "Original":
                     sauceCost = 0.50;
                     break;
@@ -49,7 +50,7 @@
                     break;
             }
 
-            switch(cheeseValue) { //change the cheese cost based on selection
+            switch (cheeseValue) { //change the cheese cost based on selection
                 case "Cheddar":
                     cheeseCost = 1.00;
                     break;
@@ -77,13 +78,16 @@
             document.getElementById("crustDisplay").innerHTML = crustValue;
             document.getElementById("sauceDisplay").innerHTML = sauceValue;
             document.getElementById("cheeseDisplay").innerHTML = cheeseValue;
-            document.getElementById("toppingsDisplay").innerHTML = selected;            
+            document.getElementById("toppingsDisplay").innerHTML = selected;
             document.getElementById("totalDisplay").innerHTML = "$" + totalCost;
+
+            //var output = "<a href='#' id='addToCartBtn' class='btn btn-primary btn-lg add-to-cart' data-name='Create Your Own' data-price='"+totalCost+"'>Add to Cart</a>";
+            //$("#createAddToCartBtn").html(output);
         }
 
 
     </script>
-
+    
 </head>
 
 <body>
@@ -260,7 +264,8 @@
                     </ul>
                     <!--Add to Cart-->
                     <div class="row">
-                        <a href="#" id="addToCartBtn" class="btn btn-primary btn-lg">Add to Cart</a>
+                        <p id="createAddToCartBtn"></p>
+                        <a href="#" id="addToCartBtn" class="btn btn-primary btn-lg add-to-cart" data-name="Create Your Own" data-price="calculateCost.totalCost">Add to Cart</a>
                     </div>
                 </div>
             </div>
@@ -290,6 +295,11 @@
         </div>
 
     </footer>
+
+    <script src="js/cart.js"></script>
+    <script src="js/shoppingCart.js"></script>
+
+    
 
 </body>
 

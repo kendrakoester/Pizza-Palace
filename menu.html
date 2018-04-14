@@ -13,6 +13,7 @@
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/cart.js"></script>
+    <script src="js/shoppingCart.js"></script>
     
 </head>
 
@@ -79,11 +80,11 @@
                         <li class="list-group-item">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <b>Three Cheese</b>
+                                    <b>Three Cheese - $9.00</b>
                                     <p>Classic Mozzerella cheese stuffed crust, tomato basil marinara sauce, covered in layers
                                         of cheese. Cheeses include Parmesan, Asiago, and Mozzarella.
                                     </p>
-                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med">Add to Cart</a>
+                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med add-to-cart" data-name="Three Cheese" data-price="9.00">Add to Cart</a>
                                 </div>
                                 <div class="col-md-4">
                                     <img id="menuImage" class="img-responsive img-rounded" src="images/menuCheese.jpg" alt="Three Cheese">
@@ -93,11 +94,11 @@
                         <li class="list-group-item">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <b>Pepperoni</b>
+                                    <b>Pepperoni - $10.00</b>
                                     <p>Classic crust, tomato basil marinara sauce, covered in Mozzerella cheese and layers of
                                         Pepperoni.
                                     </p>
-                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med">Add to Cart</a>
+                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med add-to-cart" data-name="Pepperoni" data-price="10.00">Add to Cart</a>
                                 </div>
                                 <div class="col-md-4">
                                     <img id="menuImage" class="img-responsive img-rounded" src="images/menuPepperoni.jpeg" alt="Pepperoni">
@@ -107,11 +108,11 @@
                         <li class="list-group-item">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <b>Hawaiian</b>
+                                    <b>Hawaiian - $10.00</b>
                                     <p>Classic crust, tomato basil marinara sauce, covered in Mozzerella cheese, topped with
                                         fresh pineapple and ham.
                                     </p>
-                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med">Add to Cart</a>
+                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med add-to-cart" data-name="Hawaiian" data-price="10.00">Add to Cart</a>
                                 </div>
                                 <div class="col-md-4">
                                     <img id="menuImage" class="img-responsive img-rounded" src="images/menuHawiian.jpeg" alt="Hawiian">
@@ -121,12 +122,12 @@
                         <li class="list-group-item">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <b>Combo</b>
+                                    <b>Combo - $12.00</b>
                                     <p>Classic crust, tomato basil marinara sauce, covered in Mozzerella cheese, topped with
                                         sliced green peppers, button mushrooms, sliced roma tomatos, olives, Italian sausage,
                                         pepperoni and ham.
                                     </p>
-                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med">Add to Cart</a>
+                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med add-to-cart" data-name="Combo" data-price="12.00">Add to Cart</a>
                                 </div>
                                 <div class="col-md-4">
                                     <img id="menuImage" class="img-responsive img-rounded" src="images/menuCombo.png" alt="Combo">
@@ -136,11 +137,11 @@
                         <li class="list-group-item">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <b>Meat Lovers</b>
+                                    <b>Meat Lovers - $12.00</b>
                                     <p>Classic crust, tomato basil marinara sauce, covered in Mozzerella cheese, topped with
                                         Italian sausage, pepperoni, bacon crumbles and ham.
                                     </p>
-                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med">Add to Cart</a>
+                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med add-to-cart" data-name="Meat Lovers" data-price="12.00">Add to Cart</a>
                                 </div>
                                 <div class="col-md-4">
                                     <img id="menuImage" class="img-responsive img-rounded" src="images/menuMeatLovers.jpeg" alt="Meat Lovers">
@@ -150,12 +151,12 @@
                         <li class="list-group-item">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <b>Veggie Lovers</b>
+                                    <b>Veggie Lovers - $10.00</b>
                                     <p>Classic crust, tomato basil marinara sauce, covered in Mozzerella cheese, topped with
                                         sliced green peppers, button mushrooms, sliced roma tomatos, olives, artichoke hearts,
                                         basil leaves, and baby spinach.
                                     </p>
-                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med">Add to Cart</a>
+                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med add-to-cart" data-name="Veggie Lovers" data-price="10.00">Add to Cart</a>
                                 </div>
                                 <div class="col-md-4">
                                     <img id="menuImage" class="img-responsive img-rounded" src="images/menuVeggieLover.jpeg" alt="Veggie Lovers">
@@ -178,10 +179,10 @@
                         <li class="list-group-item">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <b>Bread Sticks</b>
+                                    <b>Bread Sticks - $5.00</b>
                                     <p>Soft garlic butter bread sticks.
                                     </p>
-                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med">Add to Cart</a>
+                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med add-to-cart" data-name="Bread Sticks" data-price="5.00">Add to Cart</a>
                                 </div>
                                 <div class="col-md-4">
                                     <img id="menuImage" class="img-responsive img-rounded" src="images/menuBreadSticks.png" alt="Bread Sticks">
@@ -191,10 +192,10 @@
                         <li class="list-group-item">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <b>Garden Salad</b>
+                                    <b>Garden Salad - $7.00</b>
                                     <p>Mixed greens, tomatos, cucumber, carrots and ranch dressing.
                                     </p>
-                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med">Add to Cart</a>
+                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med add-to-cart" data-name="Garden Salad" data-price="7.00">Add to Cart</a>
                                 </div>
                                 <div class="col-md-4">
                                     <img id="menuImage" class="img-responsive img-rounded" src="images/menuGardenSalad.jpg" alt="Garden Salad">
@@ -204,10 +205,10 @@
                         <li class="list-group-item">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <b>Ceasar Salad</b>
+                                    <b>Ceasar Salad - $7.00</b>
                                     <p>Chopped romain lettuce, cheese, croutons and ceasar dressing.
                                     </p>
-                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med">Add to Cart</a>
+                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med add-to-cart" data-name="Ceasar Salad" data-price="7.00">Add to Cart</a>
                                 </div>
                                 <div class="col-md-4">
                                     <img id="menuImage" class="img-responsive img-rounded" src="images/menuCeasarSalad.jpg" alt="Ceasar Salad">
@@ -230,10 +231,10 @@
                         <li class="list-group-item">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <b>Chocolate Chip Cookie Dough</b>
+                                    <b>Chocolate Chip Cookie Dough - $6.00</b>
                                     <p>Soft chocolate chip cookies. Bake at 350 degrees for 10-12 minutes or until golden brown.
                                     </p>
-                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med">Add to Cart</a>
+                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med add-to-cart" data-name="Chocolate Chip Cookie Dough" data-price="6.00">Add to Cart</a>
                                 </div>
                                 <div class="col-md-4">
                                     <img id="menuImage" class="img-responsive img-rounded" src="images/menuChocolateChipCookies.jpg" alt="Chocolate Chip Cookies">
@@ -243,10 +244,10 @@
                         <li class="list-group-item">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <b>Peanut Butter Cookie Dough</b>
+                                    <b>Peanut Butter Cookie Dough - $6.00</b>
                                     <p>Soft peanut butter cookies. Bake at 350 degrees for 10-12 minutes or until golden brown.
                                     </p>
-                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med">Add to Cart</a>
+                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med add-to-cart" data-name="Peanut Butter Cookie Dough" data-price="6.00">Add to Cart</a>
                                 </div>
                                 <div class="col-md-4">
                                     <img id="menuImage" class="img-responsive img-rounded" src="images/menuPeanutButterCookies.jpg" alt="Peanut Butter Cookies">
@@ -256,10 +257,10 @@
                         <li class="list-group-item">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <b>Cinnamon Swirl Bread</b>
+                                    <b>Cinnamon Swirl Bread - $7.00</b>
                                     <p>Classic crust covered in Cinnamon and sugar with white icing swirled on.
                                     </p>
-                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med">Add to Cart</a>
+                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med add-to-cart" data-name="Cinnamon Swirl Bread" data-price="7.00">Add to Cart</a>
                                 </div>
                                 <div class="col-md-4">
                                     <img id="menuImage" class="img-responsive img-rounded" src="images/menuCinnamonPizza.png" alt="Cinnamon Pizza">
@@ -282,10 +283,10 @@
                         <li class="list-group-item">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <b>Soda</b>
+                                    <b>Soda - $2.00</b>
                                     <p>CocaCola, Diet Coke, Dr Pepper, Sprite, Orange Fanta, Grape Fanta.
                                     </p>
-                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med">Add to Cart</a>
+                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med add-to-cart" data-name="Soda" data-price="2.00">Add to Cart</a>
                                 </div>
                                 <div class="col-md-4">
                                     <img id="menuImage" class="img-responsive img-rounded" src="images/menuSoda.png" alt="Soda">
@@ -295,10 +296,10 @@
                         <li class="list-group-item">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <b>Lemonade</b>
+                                    <b>Lemonade - $3.00</b>
                                     <p>All natural Lemonade.
                                     </p>
-                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med">Add to Cart</a>
+                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med add-to-cart" data-name="Lemonade" data-price="3.00">Add to Cart</a>
                                 </div>
                                 <div class="col-md-4">
                                     <img id="menuImage" class="img-responsive img-rounded" src="images/menuLemonade.jpg" alt="Lemonade">
@@ -308,10 +309,10 @@
                         <li class="list-group-item">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <b>Tea</b>
+                                    <b>Tea - $2.00</b>
                                     <p>Fresh brewed Sweet Tea or Iced Tea.
                                     </p>
-                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med">Add to Cart</a>
+                                    <a href="#" id="addToCartBtn" class="btn btn-primary btn-med add-to-cart" data-name="Tea" data-price="2.00">Add to Cart</a>
                                 </div>
                                 <div class="col-md-4">
                                     <img id="menuImage" class="img-responsive img-rounded" src="images/menuTea.jpg" alt="Tea">
@@ -350,6 +351,10 @@
         </div>
 
     </footer>
+
+
+    <script src="js/cart.js"></script>
+    <script src="js/shoppingCart.js"></script>
 
 </body>
 

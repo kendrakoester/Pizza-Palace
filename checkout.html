@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Pizza Palace</title>
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!--JavaScript-->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/shoppingCart.js"></script>
+
+</head>
+
+<body>
+    <div id="background"></div>
+    <div class="clear-fix"></div>
+    <!--header -->
+    <header>
+        <!-- main container -->
+        <div class="container">
+
+            <!-- single row -->
+            <div class="row">
+                <br/>
+                <!-- col left -->
+                <div class="col-md-4">
+                    <a href="index.html">
+                        <img class="img-responsive img-rounded" src="images/logo.png" alt="Pizza Palace">
+                    </a>
+                </div>
+
+                <!--home page menu-->
+                <div class="col-md-2">
+                    <a href="menu.html" id="menuBtn" class="btn btn-primary btn-lg"> Menu</a>
+                </div>
+
+                <div class="col-md-2">
+                    <a href="locations.html" id="menuBtn" class="btn btn-primary btn-lg"> Locations</a>
+                </div>
+
+                <div class="col-md-2">
+                    <a href="aboutUs.html" id="menuBtn" class="btn btn-primary btn-lg"> About Us</a>
+                </div>
+
+                <div class="col-md-2">
+                    <a href="shoppingCart.html">
+                        <img class="img-responsive img-rounded" src="images/cartIcon.png" width="50%" height="50%" alt="Shopping Cart">
+                    </a>
+                </div>
+
+                <!--</div>-->
+
+            </div>
+
+        </div>
+
+    </header>
+    <div class="clear-fix"></div>
+
+    <!-- main body -->
+    <section>
+
+        <!-- main container -->
+        <div class="container">
+
+            <!-- single row -->
+            <div class="row">
+                <br/>
+                <!-- col-1 -->
+                <div class="col-md-12">
+
+                    <h2>Checkout</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h3>Billing Address</h3>
+                                        <label>Full Name</label>
+                                        <input type="text" id="fname" name="fullname" placeholder="John M. Doe">
+                                        <br />
+                                        <label>Email</label>
+                                        <input type="text" id="email" name="email" placeholder="john@example.com">
+                                        <br />
+                                        <label>Address</label>
+                                        <input type="text" id="adr" name="address" placeholder="123 Main Street">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label>City</label>
+                                        <input type="text" id="city" name="city" placeholder="Salt Lake City">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>State</label>
+                                        <input type="text" id="state" name="state" placeholder="Utah">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>Zip</label>
+                                        <input type="text" id="zip" name="zip" placeholder="84121">
+                                    </div>
+                                </div>
+
+                                <h3>Payment</h3>
+                                <label>Name on Card</label>
+                                <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                                <br />
+                                <label>Credit card number</label>
+                                <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label>Exp Month</label>
+                                        <input type="text" id="expmonth" name="expmonth" placeholder="08">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>Exp Year</label>
+                                        <input type="text" id="expyear" name="expyear" placeholder="2018">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>CVV</label>
+                                        <input type="text" id="cvv" name="cvv" placeholder="352">
+                                    </div>
+                                </div>
+                            </form>
+
+                            <br />
+                            <br />
+                            <h3>Cart Total:</h3>
+                            <div class="col-md-4">
+                                <label>Promo Code</label>
+                                <input type="text" id="promoCode" placeholder="">
+                            </div>
+                            <div class="col-md-8">
+                                <button onclick="calculateDiscount()" id="discountButton" class="btn btn-primary btn-med shopBtn">Add Discount</button>
+                            </div>
+                            <br />
+                            <br />
+                            <h4>Total Cost: $
+                                <span id="total-cart"></span>
+                            </h4>
+
+                            <button onclick="submit()" id="submitButton" class="btn btn-primary btn-lg shopBtn">Submit</button>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <div class="clear-fix"></div>
+
+    <!-- footer -->
+    <footer>
+
+        <!-- main container -->
+        <div class="container">
+
+            <!-- single row -->
+            <div class="row">
+                <br/>
+                <!-- col-full -->
+                <div class="col-md-12">
+                    <a href="Refrences.txt" style="color:white;">Image Reference Links</a>
+                    <p id="footer-p">Copyrights &copy; Pizza Palace</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script type="text/javascript">
+
+        function calculateDiscount() {
+
+            var newTotalCost;
+            var totalCost = document.getElementById("total-cart").innerHTML;
+            var promoCode = document.getElementById("promoCode").value;
+
+            if (promoCode === "#family")
+            {
+                newTotalCost = (totalCost - (totalCost * 0.15)).toFixed(2);
+            }
+            else if (promoCode === "#gameday" && totalCost >= 50)
+            {
+                newTotalCost = (totalCost - 10).toFixed(2);
+            }
+            else
+            {
+                var error = "Invalid Promo Code";
+                document.getElementById("promoCode").value = error;
+            }
+
+            if (newTotalCost !== totalCost)
+            {
+                document.getElementById("discountButton").disabled = true;
+                document.getElementById("total-cart").innerHTML = totalCost;
+            }
+
+        }
+
+        function submit() {
+
+
+        }
+
+    </script>
+
+    <script src="js/cart.js"></script>
+    <script src="js/shoppingCart.js"></script>
+
+</body>
+
+</html>

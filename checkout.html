@@ -131,23 +131,43 @@
                                 </div>
                             </form>
 
-                            <br />
-                            <br />
-                            <h3>Cart Total:</h3>
-                            <div class="col-md-4">
-                                <label>Promo Code</label>
-                                <input type="text" id="promoCode" placeholder="">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h3>Location for Pickup</h3>
+                                    <select id="location" name="location">
+                                        <option value="Salt Lake City">Salt Lake City</option>
+                                        <option value="Ogden">Ogden</option>
+                                        <option value="Farmington">Farmington</option>
+                                        <option value="Sandy">Sandy</option>
+                                        <option value="Provo">Provo</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="col-md-8">
-                                <button onclick="calculateDiscount()" id="discountButton" class="btn btn-primary btn-med shopBtn">Add Discount</button>
-                            </div>
-                            <br />
-                            <br />
-                            <h4>Total Cost: $
-                                <span id="total-cart"></span>
-                            </h4>
 
-                            <button onclick="submit()" id="submitButton" class="btn btn-primary btn-lg shopBtn">Submit</button>
+                            <br />
+                            <br />
+                            <div class="row">
+                                <h3>Cart Total:</h3>
+                                <div class="col-md-4">
+                                    <label>Promo Code</label>
+                                    <input type="text" id="promoCode" placeholder="">
+                                </div>
+                                <div class="col-md-8">
+                                    <button onclick="calculateDiscount()" id="discountButton" class="btn btn-primary btn-med shopBtn">Add Discount</button>
+                                </div>
+                                <br />
+                                <br />
+                                <h4>Total Cost: $
+                                    <span id="total-cart"></span>
+                                </h4>
+
+                                <div class="col-md-3">
+                                    <button onclick="submit()" id="submitButton" class="btn btn-primary btn-lg shopBtn">Submit</button>
+                                </div>
+                                <div class="col-md-9">
+                                    <h4 id="locationDisplay"></h4>
+                                </div>
+                            </div>
                         </li>
 
 
@@ -198,12 +218,12 @@
             }
             else if (promoCode === "#gameday" && totalCost >= 50)
             {
+                document.getElementById("promoCode").value = error;
                 newTotalCost = (totalCost - 10).toFixed(2);
             }
             else
             {
                 var error = "Invalid Promo Code";
-                document.getElementById("promoCode").value = error;
             }
 
             if (newTotalCost !== totalCost)
@@ -215,8 +235,13 @@
         }
 
         function submit() {
+            var locationDoc = document.getElementById("location");
+            var locationValue = locationDoc.options[locationDoc.selectedIndex].value;
 
+            var randomTime = Math.floor(Math.random() * (60 - 5 + 1)) + 5;
 
+            var output = "Your order will be ready for pick up in " + randomTime + " minutes at the " + locationValue + " location."; 
+            document.getElementById("locationDisplay").innerHTML = output;
         }
 
     </script>

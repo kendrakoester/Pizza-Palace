@@ -212,11 +212,15 @@
             var totalCost = document.getElementById("total-cart").innerHTML;
             var promoCode = document.getElementById("promoCode").value;
 
-            if (promoCode === "#family")
+            var d = new Date();
+            var day = d.getDay();
+            console.log("Day " + day);
+
+            if (promoCode === "#family" && day === 2)
             {
                 newTotalCost = (totalCost - (totalCost * 0.15)).toFixed(2);
             }
-            else if (promoCode === "#gameday" && totalCost >= 50)
+            else if ((promoCode === "#gameday" && totalCost >= 50) && day === 1)
             {
                 document.getElementById("promoCode").value = error;
                 newTotalCost = (totalCost - 10).toFixed(2);
@@ -224,6 +228,8 @@
             else
             {
                 var error = "Invalid Promo Code";
+                newTotalCost = totalCost;
+                document.getElementById("locationDisplay").innerHTML = error;
             }
 
             if (newTotalCost !== totalCost)
